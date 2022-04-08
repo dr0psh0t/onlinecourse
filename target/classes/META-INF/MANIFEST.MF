@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Built-By: fst.user
+Build-Jdk: 17.0.2
+Implementation-Title: onlinecourse
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.onlinecourse
+Implementation-URL: https://spring.io/projects/spring-boot/onlinecourse
+Created-By: Maven Integration for Eclipse
+
