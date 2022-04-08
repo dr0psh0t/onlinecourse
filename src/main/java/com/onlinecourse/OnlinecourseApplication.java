@@ -1,5 +1,8 @@
 package com.onlinecourse;
 
+import com.onlinecourse.entity.Role;
+import com.onlinecourse.entity.Roles;
+//import com.onlinecourse.entity.User;
 import com.onlinecourse.service.UserService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -23,11 +26,15 @@ public class OnlinecourseApplication {
 	@Bean
 	CommandLineRunner run(UserService userService) {
 		return args -> {
+			
+			/*userService.saveRole(new Role(Roles.STUDENT.name()));
+			userService.saveRole(new Role(Roles.INSTRUCTOR.name()));
+			userService.saveRole(new Role(Roles.MODERATOR.name()));
+			userService.saveRole(new Role(Roles.ADMIN.name()));*/
 
 			/*userService.saveUser(new User("Daryll", "Dagondon", "dagondon@gmail.com", "daryll", "1234"));
 			userService.saveUser(new User("David", "Gwapo", "david@gwapo.com", "david", "1234"));
 			userService.saveUser(new User("Dagondon", "Pogi", "dagondon@pogi.com", "dagondon", "1234"));*/
-			
 			
 			/*userService.saveRole(new Role("STUDENT"));
 			userService.saveRole(new Role("INSTRUCTOR"));

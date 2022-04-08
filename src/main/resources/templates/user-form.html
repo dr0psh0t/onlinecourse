@@ -43,6 +43,21 @@
 
         <input type="text" th:field="*{password}"
                class="form-control mb-4 col-4" placeholder="Password">
+            
+        <p>
+			<label>Roles:
+				<input type="checkbox" name="roles" style="margin: 0 5px 0 30px;"
+					th:each="role : ${rolesList}" 
+					th:text="${role.name} "
+					th:value="${role.id}"
+					th:field="*{roles}" />
+			</label>
+        <p>
+               
+        <!--<select class="form-control mb-4 col-4" placeholder="Select Role" id="rolesDropDownList">
+        	<option value="">Select Role</option>
+        	<option th:each="role : ${roles}" th:value="${role}" th:text="${role}"></option>
+        </select>-->
 
         <button type="submit" class="btn btn-info col-2">Save</button>
     </form>
