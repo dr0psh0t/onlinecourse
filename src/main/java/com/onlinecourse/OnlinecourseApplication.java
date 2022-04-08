@@ -1,8 +1,5 @@
 package com.onlinecourse;
 
-import com.onlinecourse.entity.Role;
-import com.onlinecourse.entity.Roles;
-//import com.onlinecourse.entity.User;
 import com.onlinecourse.service.UserService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
