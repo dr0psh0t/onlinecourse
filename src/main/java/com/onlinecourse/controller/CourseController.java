@@ -57,7 +57,6 @@ public class CourseController {
     	User user = new User();
 
     	List<Role> rolesList = roleService.findAll();
-    	System.out.println(rolesList);
     	
     	user.getRoles().addAll(rolesList);
         
