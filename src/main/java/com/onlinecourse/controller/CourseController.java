@@ -72,6 +72,7 @@ public class CourseController {
     		@ModelAttribute("user") User user,
     		@RequestParam(value = "roles") ArrayList<Integer> roles) {
     	
+    	//	transform ArrayList<Integer> to List<Role> using map function
     	final List<Role> rolesList = roles.stream().map(id -> roleService.findOne(id)).collect(Collectors.toList());
     	
     	user.getRoles().addAll(rolesList);
