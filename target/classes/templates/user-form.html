@@ -53,11 +53,13 @@
 					th:field="*{roles}" />
 			</label>
         <p>
-               
-        <!--<select class="form-control mb-4 col-4" placeholder="Select Role" id="rolesDropDownList">
-        	<option value="">Select Role</option>
-        	<option th:each="role : ${roles}" th:value="${role}" th:text="${role}"></option>
-        </select>-->
+        
+        <select class="form-control mb-4 col-4" placeholder="Select Place" id="placeDropDownList" name="place" value="ASIA">
+			<option th:each="place : ${placesList}" 
+				th:value="${place.id}" 
+				th:text="${place.name}"
+				th:selected="(${place.id} == ${user.place})"></option>
+        </select>
 
         <button type="submit" class="btn btn-info col-2">Save</button>
     </form>

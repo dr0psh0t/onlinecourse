@@ -3,18 +3,18 @@ package com.onlinecourse.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "role")
-public class Role {
-    @Id
+@Table(name = "place")
+public class Place {
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private int id;
 
     @Column(name = "name")
     private String name;
-
-    public Role() {}
-    public Role(String name) { this.name = name; }
+    
+    public Place() {}
+    public Place(String name) { this.name = name; }
 
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }

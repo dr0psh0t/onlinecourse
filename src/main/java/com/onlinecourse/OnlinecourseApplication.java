@@ -1,7 +1,5 @@
 package com.onlinecourse;
 
-import com.onlinecourse.entity.Role;
-import com.onlinecourse.entity.Roles;
 import com.onlinecourse.service.UserService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -29,7 +27,14 @@ public class OnlinecourseApplication {
 			/*userService.saveRole(new Role(Roles.STUDENT.name()));
 			userService.saveRole(new Role(Roles.INSTRUCTOR.name()));
 			userService.saveRole(new Role(Roles.MODERATOR.name()));
-			userService.saveRole(new Role(Roles.ADMIN.name()));*/
+			userService.saveRole(new Role(Roles.ADMIN.name()));
+			
+			userService.addPlace(new Place(Places.AFRICA.name()));
+			userService.addPlace(new Place(Places.ASIA.name()));
+			userService.addPlace(new Place(Places.AUSTRALIA.name()));
+			userService.addPlace(new Place(Places.EUROPE.name()));
+			userService.addPlace(new Place(Places.NORTHAMERICA.name()));
+			userService.addPlace(new Place(Places.SOUTHAMERICA.name()));*/
 
 			/*userService.saveUser(new User("Daryll", "Dagondon", "dagondon@gmail.com", "daryll", "1234"));
 			userService.saveUser(new User("David", "Gwapo", "david@gwapo.com", "david", "1234"));
