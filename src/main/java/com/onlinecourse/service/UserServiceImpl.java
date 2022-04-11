@@ -1,9 +1,11 @@
 package com.onlinecourse.service;
 
 import com.onlinecourse.dao.CourseRepo;
+import com.onlinecourse.dao.PlaceRepo;
 import com.onlinecourse.dao.RoleRepo;
 import com.onlinecourse.dao.UserRepo;
 import com.onlinecourse.entity.Course;
+import com.onlinecourse.entity.Place;
 import com.onlinecourse.entity.Role;
 import com.onlinecourse.entity.User;
 import com.onlinecourse.utils.Log;
@@ -23,13 +25,20 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     private final UserRepo userRepo;
     private final RoleRepo roleRepo;
     private final CourseRepo courseRepo;
+    private final PlaceRepo placeRepo;
     private final PasswordEncoder passwordEncoder;
 
     public UserServiceImpl(
-            UserRepo userRepo, RoleRepo roleRepo, CourseRepo courseRepo, PasswordEncoder passwordEncoder) {
+            UserRepo userRepo, 
+            RoleRepo roleRepo, 
+            CourseRepo courseRepo, 
+            PlaceRepo placeRepo,
+            PasswordEncoder passwordEncoder) {
+    	
         this.userRepo = userRepo;
         this.roleRepo = roleRepo;
         this.courseRepo = courseRepo;
+        this.placeRepo = placeRepo;
         this.passwordEncoder = passwordEncoder;
     }
 
@@ -45,6 +54,12 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     public Role saveRole(Role role) {
         //log.info("Saving new role {} to the database", role.getName());
         return roleRepo.save(role);
+    }
+    
+    @Override
+    public Place addPlace(Place place) {
+        //log.info("Saving new role {} to the database", role.getName());
+        return placeRepo.save(place);
     }
 
     @Override

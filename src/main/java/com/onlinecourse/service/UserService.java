@@ -1,5 +1,6 @@
 package com.onlinecourse.service;
 
+import com.onlinecourse.entity.Place;
 import com.onlinecourse.entity.Role;
 import com.onlinecourse.entity.User;
 import java.util.List;
@@ -7,6 +8,7 @@ import java.util.List;
 public interface UserService {
     User saveUser(User user);
     Role saveRole(Role role);
+    Place addPlace(Place place);
     void addRoleToUser(String username, String roleName);
     User getUser(String username);
     List<User> getUsers();

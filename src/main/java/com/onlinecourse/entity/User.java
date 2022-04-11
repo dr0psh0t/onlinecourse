@@ -28,6 +28,9 @@ public class User {
 
     @Column(name = "password")
     private String password;
+    
+    @Column(name = "place")
+    private String place;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "instructor",
             cascade = {
@@ -50,12 +53,13 @@ public class User {
 
     public User() {}
 
-    public User(String firstName, String lastName, String email, String username, String password) {
+    public User(String firstName, String lastName, String email, String username, String password, String place) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.username = username;
         this.password = password;
+        this.place = place;
     }
 
     public int getId() { return id; }
@@ -75,6 +79,9 @@ public class User {
 
     public String getPassword() { return password; }
     public void setPassword(String password) { this.password = password; }
+    
+    public String getPlace() { return place; }
+    public void setPlace(String place) { this.place = place; }
 
     public List<Role> getRoles() { return roles; }
     public List<Course> getCreatedCourses() { return createdCourses; }

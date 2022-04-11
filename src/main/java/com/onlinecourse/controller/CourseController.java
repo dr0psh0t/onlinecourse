@@ -1,17 +1,16 @@
 package com.onlinecourse.controller;
 
+import com.onlinecourse.entity.Place;
 import com.onlinecourse.entity.Role;
-import com.onlinecourse.entity.Roles;
 import com.onlinecourse.entity.User;
+import com.onlinecourse.service.PlaceService;
 import com.onlinecourse.service.RoleService;
 import com.onlinecourse.service.UserService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -20,10 +19,12 @@ public class CourseController {
 
     private UserService userService;
     private RoleService roleService;
+    private PlaceService placeService;
 
-    public CourseController(UserService userService, RoleService roleService) {
+    public CourseController(UserService userService, RoleService roleService, PlaceService placeService) {
         this.userService = userService;
         this.roleService = roleService;
+        this.placeService = placeService;
     }
 	
 	@GetMapping("/AdminHome")
@@ -57,12 +58,13 @@ public class CourseController {
     	User user = new User();
 
     	List<Role> rolesList = roleService.findAll();
-    	System.out.println(rolesList);
+    	List<Place> placesList = placeService.findAll();
     	
     	user.getRoles().addAll(rolesList);
         
     	model.addAttribute("user", user);
     	model.addAttribute("rolesList", rolesList);
+    	model.addAttribute("placesList", placesList);
     	
     	return "user-form";
     }
@@ -89,6 +91,7 @@ public class CourseController {
         
     	model.addAttribute("user", user);
     	model.addAttribute("rolesList", roleService.findAll());
+    	model.addAttribute("placesList", placeService.findAll());
     	
     	return "user-form";
     }
