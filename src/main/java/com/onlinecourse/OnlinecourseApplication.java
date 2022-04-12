@@ -1,5 +1,9 @@
 package com.onlinecourse;
 
+import com.onlinecourse.entity.Place;
+import com.onlinecourse.entity.Places;
+import com.onlinecourse.entity.Role;
+import com.onlinecourse.entity.Roles;
 import com.onlinecourse.service.UserService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
