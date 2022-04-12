@@ -31,6 +31,10 @@ public class User {
     
     @Column(name = "place")
     private String place;
+    
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_image_id")
+    private UserImage userImage;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "instructor",
             cascade = {
@@ -61,7 +65,20 @@ public class User {
         this.password = password;
         this.place = place;
     }
-
+    
+    public User(User otherUser) {
+    	setId(otherUser.getId());
+    	setFirstName(otherUser.getFirstName());
+    	setLastName(otherUser.getLastName());
+    	setEmail(otherUser.getEmail());
+    	setUsername(otherUser.getUsername());
+    	setPassword(otherUser.getPassword());
+    	setPlace(otherUser.getPlace());
+    	this.roles = otherUser.getRoles();
+    	this.createdCourses = otherUser.getCreatedCourses();
+    	this.takenCourses = otherUser.getTakenCourses();
+    }
+ 
     public int getId() { return id; }
     public void setId(int id) { this.id = id; }
 
@@ -86,9 +103,20 @@ public class User {
     public List<Role> getRoles() { return roles; }
     public List<Course> getCreatedCourses() { return createdCourses; }
     public List<Course> getTakenCourses() { return takenCourses; }
+    
+    public UserImage getUserImage() { return userImage; }
+    public void setUserImage(UserImage userImage) { this.userImage = userImage; }
 
     @Override
     public String toString() {
-        return "("+lastName+","+firstName+","+username+","+email+","+password+","+roles+")";
+    	return new StringBuilder()
+    			.append(lastName).append(",")
+    			.append(firstName).append(",")
+    			.append(username).append(",")
+    			.append(email).append(",")
+    			.append(password).append(",")
+    			.append(roles).append(",")
+    			.append(place)
+    			.toString();
     }
 }
