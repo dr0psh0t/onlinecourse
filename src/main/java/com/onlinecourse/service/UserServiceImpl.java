@@ -8,15 +8,21 @@ import com.onlinecourse.entity.Course;
 import com.onlinecourse.entity.Place;
 import com.onlinecourse.entity.Role;
 import com.onlinecourse.entity.User;
+import com.onlinecourse.entity.UserImage;
 import com.onlinecourse.utils.Log;
+
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
 import javax.transaction.Transactional;
+
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.*;
 
 @Service
@@ -43,11 +49,24 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     }
 
     @Override
-    public User saveUser(User user) {
-        //log.info("Saving new user {} to the database", user.getName());
-        Log.info("Saving new user to the database: "+user.getUsername());
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
-        return userRepo.save(user);
+    public User saveUser(User user, List<Role> roles, MultipartFile profilepicture) {
+    	Log.info("Saving new user to the database: "+user.getUsername());
+    	
+    	try {
+            user.setPassword(passwordEncoder.encode(user.getPassword()));
+            user.getRoles().addAll(roles);
+            
+            UserImage userImage = new UserImage(
+            		profilepicture.getOriginalFilename(),
+            		profilepicture.getContentType(),
+            		profilepicture.getBytes());
+            
+            user.setUserImage(userImage);
+	        return userRepo.save(user);
+	        
+		} catch (IOException e) {
+			return new User();
+		}
     }
 
     @Override
@@ -85,8 +104,8 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     @Override
     public void addTakenCourseToStudent(String username, String courseTitle) {
         User student = userRepo.findByUsername(username);
-
         Course course = courseRepo.findByTitle(courseTitle);
+        
         if (course == null) {
             course = courseRepo.save(new Course(courseTitle, student));
         }
@@ -107,13 +126,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 
     @Override
     public User findById(int userId) {
-        Optional<User> user = userRepo.findById(userId);
-        
-        if (user.isPresent()) {
-			return user.get();
-		} else {
-			throw new RuntimeException("did not find user id - "+userId);
-		}
+    	return userRepo.findById(userId).orElseThrow((() -> new RuntimeException("did not find user id - "+userId)));
     }
 
     @Override
@@ -142,4 +155,14 @@ public class UserServiceImpl implements UserService, UserDetailsService {
         return new org.springframework.security.core.userdetails.User(
                 user.getUsername(), user.getPassword(), authorities);
     }
+
+	@Override
+	public String getBase64(User user) {
+		try {
+			byte[] encodeBase64 = Base64.getEncoder().encode(user.getUserImage().getFile());
+			return new String(encodeBase64, "UTF-8");
+		} catch (UnsupportedEncodingException e) {
+			return "UnsupportedEncodingException when converting file to base64";
+		}
+	}
 }

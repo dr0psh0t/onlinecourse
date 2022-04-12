@@ -22,25 +22,30 @@
 
     <p class="h4 mb-4">Save User</p>
 
-    <form action="#" th:action="@{/SaveUser}" th:object="${user}" method="POST">
+    <form action="#" th:action="@{/SaveUser}" th:object="${user}" method="POST" enctype="multipart/form-data">
 
         <!-- Add hidden form field to handle update -->
         <!-- Hidden form field required for updates -->
         <!-- This binds to the model attribute. Tells your app which employee to update -->
         <input type="hidden" th:field="*{id}" />
 
+		<label for="formFile" class="form-label">First Name:</label>
         <input type="text" th:field="*{firstName}"
                class="form-control mb-4 col-4" placeholder="First name">
 
+		<label for="formFile" class="form-label">Last Name:</label>
         <input type="text" th:field="*{lastName}"
                class="form-control mb-4 col-4" placeholder="Last name">
 
+		<label for="formFile" class="form-label">Email:</label>
         <input type="text" th:field="*{email}"
                class="form-control mb-4 col-4" placeholder="Email">
 
+		<label for="formFile" class="form-label">Username:</label>
         <input type="text" th:field="*{username}"
                class="form-control mb-4 col-4" placeholder="Username">
 
+		<label for="formFile" class="form-label">Password:</label>
         <input type="text" th:field="*{password}"
                class="form-control mb-4 col-4" placeholder="Password">
             
@@ -54,12 +59,20 @@
 			</label>
         <p>
         
+        <label for="formFile" class="form-label">Select Place:</label>
         <select class="form-control mb-4 col-4" placeholder="Select Place" id="placeDropDownList" name="place" value="ASIA">
 			<option th:each="place : ${placesList}" 
 				th:value="${place.id}" 
 				th:text="${place.name}"
 				th:selected="(${place.id} == ${user.place})"></option>
         </select>
+        
+        <div class="mb-3">
+			<label for="formFile" class="form-label">Profile Picture:</label>
+			<input class="form-control" type="file" id="profilepicture" name="profilepicture">
+		</div>
+        
+        <br>
 
         <button type="submit" class="btn btn-info col-2">Save</button>
     </form>

@@ -40,6 +40,12 @@
                     <td th:text="${user.username}"/>
 
                     <td>
+                    	<!-- Add update button/link -->
+                        <a th:href="@{/ViewImage/{id}(id=${user.id})}"
+                           class="btn btn-info btn-sm">
+                            Image
+                        </a>
+                        
                         <!-- Add update button/link -->
                         <a th:href="@{/UpdateUserForm(userId=${user.id})}"
                            class="btn btn-info btn-sm">

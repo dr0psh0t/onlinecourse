@@ -6,9 +6,11 @@ import com.onlinecourse.entity.User;
 import com.onlinecourse.service.PlaceService;
 import com.onlinecourse.service.RoleService;
 import com.onlinecourse.service.UserService;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,6 +53,14 @@ public class CourseController {
         
     	return "list-users";
     }
+    
+    @GetMapping("/ViewImage/{id}")
+    public String viewImage(@PathVariable(value = "id") int id, Model model) {
+
+    	model.addAttribute("userImage", userService.getBase64(userService.findById(id)));
+    	
+		return "view-image";
+    }
 
     @GetMapping("/AddUserForm")
     public String addUserForm(Model model) {
@@ -72,14 +82,13 @@ public class CourseController {
     @PostMapping("/SaveUser")
     public String saveUser(
     		@ModelAttribute("user") User user,
-    		@RequestParam(value = "roles") ArrayList<Integer> roles) {
+    		@RequestParam(value = "roles") ArrayList<Integer> roles,
+    		@RequestParam(value = "profilepicture") MultipartFile profilepicture) {
     	
     	//	transform ArrayList<Integer> to List<Role> using map function
     	final List<Role> rolesList = roles.stream().map(id -> roleService.findOne(id)).collect(Collectors.toList());
     	
-    	user.getRoles().addAll(rolesList);
-    	
-    	userService.saveUser(user);
+    	userService.saveUser(user, rolesList, profilepicture);
         
     	return "redirect:/ListUsers";
     }
@@ -88,8 +97,12 @@ public class CourseController {
     public String updateUserForm(@RequestParam("userId") int userId, Model model) {
         
     	User user = userService.findById(userId);
-        
-    	model.addAttribute("user", user);
+    	
+    	//	create a new user so that password will not be empty when going to update user form
+    	User user2 = new User(user);
+    	user2.setPassword("");
+    	
+    	model.addAttribute("user", user2);
     	model.addAttribute("rolesList", roleService.findAll());
     	model.addAttribute("placesList", placeService.findAll());
     	

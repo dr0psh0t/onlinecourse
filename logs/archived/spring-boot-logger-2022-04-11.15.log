@@ -1,0 +1,4 @@
+2022-04-11 16:52:22,499 INFO org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(79)-127.0.0.1] Application shutdown requested.
+2022-04-11 16:52:22,502 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [RMI TCP Connection(79)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-11 16:52:22,503 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(79)-127.0.0.1] HikariPool-4 - Shutdown initiated...
+2022-04-11 16:52:22,503 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(79)-127.0.0.1] HikariPool-4 - Shutdown completed.

@@ -3,10 +3,13 @@ package com.onlinecourse.service;
 import com.onlinecourse.entity.Place;
 import com.onlinecourse.entity.Role;
 import com.onlinecourse.entity.User;
+
 import java.util.List;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public interface UserService {
-    User saveUser(User user);
+    User saveUser(User user, List<Role> roles, MultipartFile profilepicture);
     Role saveRole(Role role);
     Place addPlace(Place place);
     void addRoleToUser(String username, String roleName);
@@ -17,4 +20,5 @@ public interface UserService {
     List<User> findAll();
     void deleteById(int userId);
     User findById(int userId);
+    String getBase64(User user);
 }

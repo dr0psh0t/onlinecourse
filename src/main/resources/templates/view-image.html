@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>User Image</title>
+</head>
+<body>
+
+<img class='img-thumbnail' th:src="'data:image/jpeg;base64,' + ${userImage}" />
+
+</body>
