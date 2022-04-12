@@ -119,7 +119,7 @@ public class CourseController {
     	//	transform ArrayList<Integer> to List<Role> using map function
     	final List<Role> rolesList = roles.stream().map(id -> roleService.findOne(id)).collect(Collectors.toList());
     	
-    	//userService.saveUser(user, rolesList, profilepicture);
+    	userService.saveUser(user, rolesList, profilepicture);
         
     	return "redirect:/ListUsers";
     }
