@@ -6,6 +6,8 @@ import com.onlinecourse.entity.User;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletResponse;
+
 import org.springframework.web.multipart.MultipartFile;
 
 public interface UserService {
@@ -21,4 +23,6 @@ public interface UserService {
     void deleteById(int userId);
     User findById(int userId);
     String getBase64(User user);
+    byte[] getBytes(User user);
+    void getImageAsStream(int id, HttpServletResponse response);
 }

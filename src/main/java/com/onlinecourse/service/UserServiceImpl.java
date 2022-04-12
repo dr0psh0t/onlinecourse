@@ -11,6 +11,7 @@ import com.onlinecourse.entity.User;
 import com.onlinecourse.entity.UserImage;
 import com.onlinecourse.utils.Log;
 
+import org.apache.tomcat.util.http.fileupload.IOUtils;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -19,9 +20,12 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletResponse;
 import javax.transaction.Transactional;
 
+import java.io.ByteArrayInputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 import java.util.*;
 
@@ -164,5 +168,20 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 		} catch (UnsupportedEncodingException e) {
 			return "UnsupportedEncodingException when converting file to base64";
 		}
+	}
+
+	@Override
+	public byte[] getBytes(User user) {
+		return user.getUserImage().getFile();
+	}
+
+	@Override
+	public void getImageAsStream(int id, HttpServletResponse response) {
+		response.setContentType("image/png");
+    	
+    	InputStream inputStream = new ByteArrayInputStream(getBytes(findById(id)));
+    	try {
+			IOUtils.copy(inputStream, response.getOutputStream());
+		} catch (IOException e) {}
 	}
 }

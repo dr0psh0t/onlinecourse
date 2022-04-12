@@ -7,14 +7,25 @@ import com.onlinecourse.service.PlaceService;
 import com.onlinecourse.service.RoleService;
 import com.onlinecourse.service.UserService;
 
+import org.apache.tomcat.util.http.fileupload.IOUtils;
+import org.springframework.http.CacheControl;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.servlet.ModelAndView;
 
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
+
+import javax.servlet.http.HttpServletResponse;
 
 @Controller
 public class CourseController {
@@ -61,6 +72,26 @@ public class CourseController {
     	
 		return "view-image";
     }
+    
+    /*@GetMapping("/GetImage/{id}")
+    public ResponseEntity<byte[]> getImage(@PathVariable(value = "id") int id) {
+    	HttpHeaders headers = new HttpHeaders();
+    	headers.setCacheControl(CacheControl.noCache().getHeaderValue());
+    	
+    	return new ResponseEntity<byte[]>(
+    			userService.getBytes(userService.findById(id)), headers, HttpStatus.OK);
+    }*/
+    
+    /*@GetMapping("/GetImage/{id}")
+    public @ResponseBody byte[] getImage(@PathVariable(value = "id") int id) {
+    	System.out.println("HERE");
+    	return userService.getBytes(userService.findById(id));
+    }*/
+    
+    @GetMapping("/GetImage/{id}")
+    public void getImage(@PathVariable(value = "id") int id, HttpServletResponse response) {
+    	userService.getImageAsStream(id, response);
+    }
 
     @GetMapping("/AddUserForm")
     public String addUserForm(Model model) {
@@ -88,7 +119,7 @@ public class CourseController {
     	//	transform ArrayList<Integer> to List<Role> using map function
     	final List<Role> rolesList = roles.stream().map(id -> roleService.findOne(id)).collect(Collectors.toList());
     	
-    	userService.saveUser(user, rolesList, profilepicture);
+    	//userService.saveUser(user, rolesList, profilepicture);
         
     	return "redirect:/ListUsers";
     }
