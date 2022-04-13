@@ -59,6 +59,6 @@ public class Course {
 
     @Override
     public String toString() {
-        return "Course [id=" + id + ", title=" + title + "]";
+        return "["+id+"-"+title+"-"+instructor.getUsername()+"]";
     }
 }

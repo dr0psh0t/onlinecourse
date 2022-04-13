@@ -10,6 +10,8 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
+import com.onlinecourse.entity.Roles;
+
 @Configuration
 @EnableWebSecurity
 public class CourseSecurityConfig extends WebSecurityConfigurerAdapter {
@@ -35,6 +37,7 @@ public class CourseSecurityConfig extends WebSecurityConfigurerAdapter {
     	
         http.authorizeRequests()
             .antMatchers("/AdminHome").hasAnyAuthority("INSTRUCTOR", "STUDENT")
+            .antMatchers("/Instructor/**").hasAuthority(Roles.INSTRUCTOR.name())
             .and()
                 .formLogin()
                 .loginPage("/Login")

@@ -37,7 +37,7 @@ public class User {
     private UserImage userImage;
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "instructor",
-            cascade = {
+            cascade = { 
                     CascadeType.PERSIST, CascadeType.MERGE,
                     CascadeType.DETACH, CascadeType.REFRESH})
     private List<Course> createdCourses;

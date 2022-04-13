@@ -3,6 +3,7 @@ package com.onlinecourse.service;
 import com.onlinecourse.dao.CourseRepo;
 import com.onlinecourse.dao.PlaceRepo;
 import com.onlinecourse.dao.RoleRepo;
+import com.onlinecourse.dao.UserImageRepo;
 import com.onlinecourse.dao.UserRepo;
 import com.onlinecourse.entity.Course;
 import com.onlinecourse.entity.Place;
@@ -36,6 +37,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     private final RoleRepo roleRepo;
     private final CourseRepo courseRepo;
     private final PlaceRepo placeRepo;
+    private final UserImageRepo userImageRepo;
     private final PasswordEncoder passwordEncoder;
 
     public UserServiceImpl(
@@ -43,29 +45,37 @@ public class UserServiceImpl implements UserService, UserDetailsService {
             RoleRepo roleRepo, 
             CourseRepo courseRepo, 
             PlaceRepo placeRepo,
+            UserImageRepo userImageRepo,
             PasswordEncoder passwordEncoder) {
     	
         this.userRepo = userRepo;
         this.roleRepo = roleRepo;
         this.courseRepo = courseRepo;
         this.placeRepo = placeRepo;
+        this.userImageRepo = userImageRepo;
         this.passwordEncoder = passwordEncoder;
     }
 
     @Override
-    public User saveUser(User user, List<Role> roles, MultipartFile profilepicture) {
+    public User saveUser(User user, List<Role> roles, MultipartFile photo, int userImageId) {
     	Log.info("Saving new user to the database: "+user.getUsername());
     	
     	try {
             user.setPassword(passwordEncoder.encode(user.getPassword()));
             user.getRoles().addAll(roles);
+          
+            //	update image
+            UserImage image = new UserImage().id(userImageId)
+            		.filename(photo.getOriginalFilename())
+            		.filetype(photo.getContentType())
+            		.bytes(photo.getBytes());
             
-            UserImage userImage = new UserImage(
-            		profilepicture.getOriginalFilename(),
-            		profilepicture.getContentType(),
-            		profilepicture.getBytes());
+            userImageRepo.save(image);
             
-            user.setUserImage(userImage);
+            //	update image which is mapped to user
+            user.setUserImage(image);
+            
+            //	save changes of the user
 	        return userRepo.save(user);
 	        
 		} catch (IOException e) {
@@ -134,7 +144,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     }
 
     @Override
-    public User getUser(String username) {
+    public User findByUsername(String username) {
         //log.info("Fetching user {}", username);
         return userRepo.findByUsername(username);
     }

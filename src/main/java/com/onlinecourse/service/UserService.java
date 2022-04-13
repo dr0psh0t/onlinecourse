@@ -11,11 +11,11 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.web.multipart.MultipartFile;
 
 public interface UserService {
-    User saveUser(User user, List<Role> roles, MultipartFile profilepicture);
+    User saveUser(User user, List<Role> roles, MultipartFile profilepicture, int userImageId);
     Role saveRole(Role role);
     Place addPlace(Place place);
     void addRoleToUser(String username, String roleName);
-    User getUser(String username);
+    User findByUsername(String username);
     List<User> getUsers();
     void addCreatedCourseToInstructor(String username, String courseTitle);
     void addTakenCourseToStudent(String username, String courseTitle);

@@ -7,20 +7,11 @@ import com.onlinecourse.service.PlaceService;
 import com.onlinecourse.service.RoleService;
 import com.onlinecourse.service.UserService;
 
-import org.apache.tomcat.util.http.fileupload.IOUtils;
-import org.springframework.http.CacheControl;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
-import org.springframework.web.servlet.ModelAndView;
 
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -73,23 +64,9 @@ public class CourseController {
 		return "view-image";
     }
     
-    /*@GetMapping("/GetImage/{id}")
-    public ResponseEntity<byte[]> getImage(@PathVariable(value = "id") int id) {
-    	HttpHeaders headers = new HttpHeaders();
-    	headers.setCacheControl(CacheControl.noCache().getHeaderValue());
-    	
-    	return new ResponseEntity<byte[]>(
-    			userService.getBytes(userService.findById(id)), headers, HttpStatus.OK);
-    }*/
-    
-    /*@GetMapping("/GetImage/{id}")
-    public @ResponseBody byte[] getImage(@PathVariable(value = "id") int id) {
-    	System.out.println("HERE");
-    	return userService.getBytes(userService.findById(id));
-    }*/
-    
     @GetMapping("/GetImage/{id}")
     public void getImage(@PathVariable(value = "id") int id, HttpServletResponse response) {
+    	System.out.println("ID === "+id);
     	userService.getImageAsStream(id, response);
     }
 
@@ -104,6 +81,7 @@ public class CourseController {
     	user.getRoles().addAll(rolesList);
         
     	model.addAttribute("user", user);
+    	model.addAttribute("userImageId", 0);
     	model.addAttribute("rolesList", rolesList);
     	model.addAttribute("placesList", placesList);
     	
@@ -114,12 +92,13 @@ public class CourseController {
     public String saveUser(
     		@ModelAttribute("user") User user,
     		@RequestParam(value = "roles") ArrayList<Integer> roles,
-    		@RequestParam(value = "profilepicture") MultipartFile profilepicture) {
+    		@RequestParam(value = "profilepicture") MultipartFile profilepicture,
+    		@RequestParam(value = "userImageId") int userImageId) {
     	
     	//	transform ArrayList<Integer> to List<Role> using map function
     	final List<Role> rolesList = roles.stream().map(id -> roleService.findOne(id)).collect(Collectors.toList());
     	
-    	userService.saveUser(user, rolesList, profilepicture);
+    	userService.saveUser(user, rolesList, profilepicture, userImageId);
         
     	return "redirect:/ListUsers";
     }
@@ -134,6 +113,7 @@ public class CourseController {
     	user2.setPassword("");
     	
     	model.addAttribute("user", user2);
+    	model.addAttribute("userImageId", user.getUserImage().getId());
     	model.addAttribute("rolesList", roleService.findAll());
     	model.addAttribute("placesList", placeService.findAll());
     	

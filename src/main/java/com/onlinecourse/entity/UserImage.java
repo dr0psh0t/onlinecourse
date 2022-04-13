@@ -28,7 +28,7 @@ public class UserImage {
 	private byte[] file;
 	
 	@OneToOne(mappedBy = "userImage",
-			cascade = {
+			cascade = {CascadeType.REMOVE,
 			CascadeType.DETACH, CascadeType.MERGE, 
 			CascadeType.PERSIST, CascadeType.REFRESH
 	})
@@ -40,6 +40,35 @@ public class UserImage {
 		this.filename = filename;
 		this.filetype = filetype;
 		this.file = file;
+	}
+	
+	public UserImage(int id, String filename, String filetype, byte[] file) {
+		this.id = id;
+		this.filename = filename;
+		this.filetype = filetype;
+		this.file = file;
+	}
+	
+	public UserImage id(int id) {
+		if (id > 0) {
+			this.id = id;
+		}
+		return this;
+	}
+	
+	public UserImage filename(String filename) {
+		this.filename = filename;
+		return this;
+	}
+	
+	public UserImage filetype(String filetype) {
+		this.filetype = filetype;
+		return this;
+	}
+	
+	public UserImage bytes(byte[] bytes) {
+		this.file = bytes;
+		return this;
 	}
 	
 	public int getId() {
