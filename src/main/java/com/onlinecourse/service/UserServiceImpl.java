@@ -58,7 +58,6 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 
     @Override
     public User saveUser(User user, List<Role> roles, MultipartFile photo, int userImageId) {
-    	Log.info("Saving new user to the database: "+user.getUsername());
     	
     	try {
             user.setPassword(passwordEncoder.encode(user.getPassword()));
@@ -74,6 +73,8 @@ public class UserServiceImpl implements UserService, UserDetailsService {
             
             //	update image which is mapped to user
             user.setUserImage(image);
+            
+            Log.info("Saving new user to the database: "+user.getUsername());
             
             //	save changes of the user
 	        return userRepo.save(user);

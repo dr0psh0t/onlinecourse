@@ -38,6 +38,7 @@ public class CourseSecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeRequests()
             .antMatchers("/AdminHome").hasAnyAuthority("INSTRUCTOR", "STUDENT")
             .antMatchers("/Instructor/**").hasAuthority(Roles.INSTRUCTOR.name())
+            .antMatchers("/Student/**").hasAuthority(Roles.STUDENT.name())
             .and()
                 .formLogin()
                 .loginPage("/Login")
@@ -45,7 +46,10 @@ public class CourseSecurityConfig extends WebSecurityConfigurerAdapter {
                 .defaultSuccessUrl("/AdminHome")
                 .permitAll()
             .and()
-            	.logout().permitAll()	//	adds logout support
+            	.logout()
+	            	.logoutUrl("/Logout")
+	            	.invalidateHttpSession(true)
+	            	.permitAll()	//	adds logout support
             .and()
             	.exceptionHandling().accessDeniedPage("/AccessDenied");
     }

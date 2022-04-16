@@ -18,8 +18,9 @@
     <div class="container">
         <h3>User Directory</h3>
         <hr>
-
         <a th:href="@{/AddUserForm}" class="btn btn-primary btn-sm mb-3">Add User</a>
+        <a th:href="@{/Student/CourseList}" class="btn btn-primary btn-sm mb-3">Courses</a>
+        <a th:href="@{/Logout}" class="btn btn-primary btn-sm mb-3">Logout</a>
 
         <table class="table table-bordered table-striped">
             <thead class="thead-dark">
@@ -28,6 +29,7 @@
                     <th>Last Name</th>
                     <th>Email</th>
                     <th>Username</th>
+                    <th>Roles</th>
                     <th>Action</th>
                 </tr>
             </thead>
@@ -37,7 +39,7 @@
                     <td th:text="${user.lastName}" />
                     <td th:text="${user.email}" />
                     <td th:text="${user.username}"/>
-
+                    <td th:text="${user.roles}"/>
                     <td>
                     
                     	<!-- edit data-bs-target="#exampleModal"
@@ -71,6 +73,7 @@
                 </tr>
             </tbody>
         </table>
+        
     </div>
     
 </body>

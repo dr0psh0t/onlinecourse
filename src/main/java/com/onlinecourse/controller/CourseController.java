@@ -66,7 +66,7 @@ public class CourseController {
     
     @GetMapping("/GetImage/{id}")
     public void getImage(@PathVariable(value = "id") int id, HttpServletResponse response) {
-    	System.out.println("ID === "+id);
+
     	userService.getImageAsStream(id, response);
     }
 

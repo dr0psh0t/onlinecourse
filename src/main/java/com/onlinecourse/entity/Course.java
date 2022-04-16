@@ -56,6 +56,19 @@ public class Course {
         }
         students.add(theStudent);
     }
+    
+    public void dropStudent(User student) {
+    	if (students != null) {
+			if (!students.isEmpty()) {
+				students.remove(student);
+			}
+		}
+    }
+    
+    public boolean hasAStudent(User student) {
+    	
+    	return students.contains(student);
+    }
 
     @Override
     public String toString() {
