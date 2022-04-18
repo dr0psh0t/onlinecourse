@@ -11,14 +11,13 @@
 	<!-- JavaScript Bundle with Popper -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
-    <title>Course Directory</title>
+    <title th:text="${user.firstName}+' '+${user.lastName}">Student Profile</title>
 </head>
 <body>
 
     <div class="container">
-        <h3>Course Directory</h3>
+        <h3 th:text="${user.firstName}+' '+${user.lastName}">Student Profile</h3>
         <hr>
-        <!--<a th:href="@{/Instructor/AddCourseForm}" class="btn btn-primary btn-sm mb-3">Add Course</a>-->
         <a th:href="@{/ListUsers}" class="btn btn-primary btn-sm mb-3">Users</a>
         <a th:href="@{/Logout}" class="btn btn-primary btn-sm mb-3">Logout</a>
 
@@ -27,12 +26,24 @@
                 <tr>
                     <th>Title</th>
                     <th>Instructor</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
             	<tr th:each="course : ${courses}">
                     <td th:text="${course.title}" />
                     <td th:text="${course.instructor.username}" />
+                    <td th:switch="${course.hasAStudent(user)}">
+                        
+                        <form th:case="false" method="POST" th:action="@{/Student/Enroll(userid=${user.id},courseid=${course.id})}">
+				            <button type="submit" name="submit" value="value" class="btn btn-info">Enroll</button>
+				        </form>
+				        <form th:case="true" method="POST" th:action="@{/Student/Drop(userid=${user.id},courseid=${course.id})}">
+				            <button type="submit" name="submit" value="value" class="btn btn-warning">Drop</button>
+				        </form>
+				        
+                    </td>
+                    
             	</tr>
             </tbody>
         </table>

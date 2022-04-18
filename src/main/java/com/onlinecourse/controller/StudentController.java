@@ -1,7 +1,6 @@
 package com.onlinecourse.controller;
 
 import java.security.Principal;
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
@@ -27,15 +26,15 @@ public class StudentController {
 		this.userService = userService;
 	}
 	
-	@GetMapping("/CourseList")
-	public String courseList(Model model, Principal principal) {
+	@GetMapping("/StudentProfile")
+	public String studentProfile(Model model, Principal principal) {
 		
 		List<Course> courses = courseService.findAll();
 		
 		model.addAttribute("courses", courses);
 		model.addAttribute("user", userService.findByUsername(principal.getName()));
 		
-		return "course-list";
+		return "student-profile";
 	}
 	
 	@PostMapping("/Enroll")

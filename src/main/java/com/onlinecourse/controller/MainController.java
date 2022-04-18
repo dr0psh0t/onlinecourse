@@ -1,8 +1,10 @@
 package com.onlinecourse.controller;
 
+import com.onlinecourse.entity.Course;
 import com.onlinecourse.entity.Place;
 import com.onlinecourse.entity.Role;
 import com.onlinecourse.entity.User;
+import com.onlinecourse.service.CourseService;
 import com.onlinecourse.service.PlaceService;
 import com.onlinecourse.service.RoleService;
 import com.onlinecourse.service.UserService;
@@ -12,6 +14,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.security.Principal;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -19,26 +22,36 @@ import java.util.stream.Collectors;
 import javax.servlet.http.HttpServletResponse;
 
 @Controller
-public class CourseController {
+public class MainController {
 
     private UserService userService;
     private RoleService roleService;
     private PlaceService placeService;
+    private CourseService courseService;
 
-    public CourseController(UserService userService, RoleService roleService, PlaceService placeService) {
+    public MainController(
+    		UserService userService, 
+    		RoleService roleService, 
+    		PlaceService placeService,
+    		CourseService courseService) {
+    	
         this.userService = userService;
         this.roleService = roleService;
         this.placeService = placeService;
+        this.courseService = courseService;
+    }
+    
+    @GetMapping("/Index")
+    public String index() {
+    	return "index";
     }
 	
-	@GetMapping("/AdminHome")
-    public String adminHome() {
-        return "admin-home";
-    }
-
-    @GetMapping("/Login")
-    public String showMyLoginPage() {
-        return "login";
+	@GetMapping("/Home")
+    public String adminHome(Model model, Principal principal) {
+		
+		model.addAttribute("username", principal.getName());
+		
+        return "home";
     }
     
     @GetMapping("/AccessDenied")
@@ -55,6 +68,16 @@ public class CourseController {
         
     	return "list-users";
     }
+    
+    @GetMapping("/CourseList")
+	public String courseList(Model model, Principal principal) {
+		
+		List<Course> courses = courseService.findAll();
+		
+		model.addAttribute("courses", courses);
+		
+		return "course-list";
+	}
     
     @GetMapping("/ViewImage/{id}")
     public String viewImage(@PathVariable(value = "id") int id, Model model) {
@@ -95,12 +118,12 @@ public class CourseController {
     		@RequestParam(value = "profilepicture") MultipartFile profilepicture,
     		@RequestParam(value = "userImageId") int userImageId) {
     	
-    	//	transform ArrayList<Integer> to List<Role> using map function
     	final List<Role> rolesList = roles.stream().map(id -> roleService.findOne(id)).collect(Collectors.toList());
     	
     	userService.saveUser(user, rolesList, profilepicture, userImageId);
         
-    	return "redirect:/ListUsers";
+    	//return "redirect:/ListUsers";
+    	return "redirect:/Home";
     }
 
     @GetMapping("UpdateUserForm")

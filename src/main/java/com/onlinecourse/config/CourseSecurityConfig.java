@@ -36,14 +36,14 @@ public class CourseSecurityConfig extends WebSecurityConfigurerAdapter {
     	
     	
         http.authorizeRequests()
-            .antMatchers("/AdminHome").hasAnyAuthority("INSTRUCTOR", "STUDENT")
+            .antMatchers("/Home").hasAnyAuthority("INSTRUCTOR", "STUDENT")
             .antMatchers("/Instructor/**").hasAuthority(Roles.INSTRUCTOR.name())
             .antMatchers("/Student/**").hasAuthority(Roles.STUDENT.name())
             .and()
                 .formLogin()
                 .loginPage("/Login")
                 .loginProcessingUrl("/authenticateTheUser")
-                .defaultSuccessUrl("/AdminHome")
+                .defaultSuccessUrl("/Home")
                 .permitAll()
             .and()
             	.logout()
