@@ -57,4 +57,20 @@ public class CourseServiceImpl implements CourseService {
 		
 		Log.info("Dropping student "+student.getUsername()+" from course "+course.getTitle());
 	}
+
+	@Override
+	public void deleteCourse(int id) {
+		
+		courseRepo.deleteById(id);
+
+		Log.info("Deleting course");
+	}
+
+	@Override
+	public Course findById(int id) {
+		
+		Log.info("Get course");
+
+		return courseRepo.findById(id).orElse(new Course());
+	}
 }

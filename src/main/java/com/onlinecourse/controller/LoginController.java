@@ -1,5 +1,6 @@
 package com.onlinecourse.controller;
 
+import java.security.Principal;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
@@ -31,15 +32,9 @@ public class LoginController {
 	}
 	
 	@GetMapping("/Login")
-    public String showMyLoginPage(HttpServletRequest request, HttpServletResponse response) {
-		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+    public String showMyLoginPage(Principal principal) {
 		
-		if (auth != null) {
-			new SecurityContextLogoutHandler().logout(request, response, auth);
-		}
-		
-		Log.info("LOGGING OUT THEN LOGGING IN");
-        return "login";
+		return principal == null ? "login" : "redirect:/Home";
     }
 
 	@GetMapping("/Logout")

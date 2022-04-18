@@ -3,6 +3,7 @@ package com.onlinecourse.controller;
 import com.onlinecourse.entity.Course;
 import com.onlinecourse.entity.Place;
 import com.onlinecourse.entity.Role;
+import com.onlinecourse.entity.Roles;
 import com.onlinecourse.entity.User;
 import com.onlinecourse.service.CourseService;
 import com.onlinecourse.service.PlaceService;
@@ -123,10 +124,11 @@ public class MainController {
     	userService.saveUser(user, rolesList, profilepicture, userImageId);
         
     	//return "redirect:/ListUsers";
-    	return "redirect:/Home";
+    	//return "redirect:/Home";
+    	return "redirect:/Logout";
     }
 
-    @GetMapping("UpdateUserForm")
+    @GetMapping("/UpdateUserForm")
     public String updateUserForm(@RequestParam("userId") int userId, Model model) {
         
     	User user = userService.findById(userId);
@@ -149,5 +151,21 @@ public class MainController {
     	userService.deleteById(userId);
         
     	return "redirect:/ListUsers";
+    }
+    
+    @GetMapping("/UserProfile/{username}")
+    public String profile(@PathVariable(value = "username") String username) {
+    	
+    	User user = userService.findByUsername(username);
+    	
+    	Role role = user.getRoles().get(0);
+    	
+    	if (role.getName().equals(Roles.INSTRUCTOR.name())) {
+    		return "redirect:/Instructor/InstructorProfile";
+		} else if (role.getName().equals(Roles.STUDENT.name())) {
+			return "redirect:/Student/StudentProfile";
+		} else {
+			return "redirect:/AccessDenied";
+		}
     }
 }

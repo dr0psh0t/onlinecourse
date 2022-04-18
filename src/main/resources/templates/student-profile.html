@@ -18,13 +18,14 @@
     <div class="container">
         <h3 th:text="${user.firstName}+' '+${user.lastName}">Student Profile</h3>
         <hr>
-        <a th:href="@{/ListUsers}" class="btn btn-primary btn-sm mb-3">Users</a>
+        <a th:href="@{/Home}" class="btn btn-primary btn-sm mb-3">Home</a>
+        <a th:href="@{/UpdateUserForm(userId=${user.id})}" class="btn btn-primary btn-sm mb-3">Edit Profile</a>
         <a th:href="@{/Logout}" class="btn btn-primary btn-sm mb-3">Logout</a>
 
         <table class="table table-bordered table-striped">
             <thead class="thead-dark">
                 <tr>
-                    <th>Title</th>
+                    <th>Enrolled Courses</th>
                     <th>Instructor</th>
                     <th>Action</th>
                 </tr>

@@ -10,4 +10,6 @@ public interface CourseService {
 	List<Course> findAll();
 	void enroll(int userid, int courseid);
 	void dropStudent(int userid, int courseid);
+	void deleteCourse(int id);
+	Course findById(int id);
 }

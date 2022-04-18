@@ -18,21 +18,33 @@
     <div class="container">
         <h3 th:text="${user.firstName}+' '+${user.lastName}">Instructor Profile</h3>
         <hr>
-        <a th:href="@{/Instructor/AddCourseForm}" class="btn btn-primary btn-sm mb-3">Add Course</a>
-        <a th:href="@{/ListUsers}" class="btn btn-primary btn-sm mb-3">Users</a>
+        <a th:href="@{/Home}" class="btn btn-primary btn-sm mb-3">Home</a>
+        <a th:href="@{/UpdateUserForm(userId=${user.id})}" class="btn btn-primary btn-sm mb-3">Edit Profile</a>
+        <a th:href="@{/Instructor/AddCourseForm}" class="btn btn-primary btn-sm mb-3">Create Course</a>
         <a th:href="@{/Logout}" class="btn btn-primary btn-sm mb-3">Logout</a>
 
         <table class="table table-bordered table-striped">
             <thead class="thead-dark">
                 <tr>
-                    <th>Title</th>
+                    <th>My Courses</th>
                     <th>Instructor</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
             	<tr th:each="course : ${courses}">
                     <td th:text="${course.title}" />
                     <td th:text="${course.instructor.username}" />
+                    <td>
+	                	<a th:href="@{/Instructor/UpdateCourse(id=${course.id})}" class="btn btn-info btn-sm">
+	                        Update
+	                    </a>
+	
+	                    <a th:href="@{/Instructor/DeleteCourse/{id}(id=${course.id})}" class="btn btn-danger btn-sm"
+	                       onclick="if (!(confirm('Are you sure you want to delete this course'))) return false">
+	                        Delete
+	                    </a>
+                    </td>
             	</tr>
             </tbody>
         </table>

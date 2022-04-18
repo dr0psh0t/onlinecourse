@@ -1,64 +1,50 @@
-2022-04-18 12:55:34,719 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-04-18 12:55:34,771 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-04-18 12:55:34,783 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will not secure any request
-2022-04-18 12:55:34,804 INFO org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [restartedMain] Adding welcome page: class path resource [static/index.html]
-2022-04-18 12:55:34,815 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
-2022-04-18 12:55:34,817 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
-2022-04-18 12:55:34,818 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path '/onlinecourse'
-2022-04-18 12:55:34,819 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started OnlinecourseApplication in 0.411 seconds (JVM running for 642.341)
-2022-04-18 12:55:34,820 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
-2022-04-18 12:55:37,861 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-04-18 12:55:37,862 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
-2022-04-18 12:55:37,863 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
-2022-04-18 12:55:37,868 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-1] LOGGING OUT THEN LOGGING IN
-2022-04-18 12:56:04,615 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-2] LOGGING OUT THEN LOGGING IN
-2022-04-18 12:56:06,642 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-4] LOGGING OUT THEN LOGGING IN
-2022-04-18 12:56:08,439 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-7] LOGGING OUT THEN LOGGING IN
-2022-04-18 12:56:14,406 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-8] LOGGING OUT THEN LOGGING IN
-2022-04-18 12:56:22,272 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-9] fetching all Roles
-2022-04-18 12:56:22,368 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-9] fetching all places
-2022-04-18 12:56:42,980 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-10] fetching all Roles
-2022-04-18 12:56:42,986 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-10] fetching all places
-2022-04-18 12:57:42,919 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-1] fetching all Roles
-2022-04-18 12:57:42,924 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-1] fetching all places
-2022-04-18 12:58:11,037 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-3] fetching all Roles
-2022-04-18 12:58:11,042 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-3] fetching all places
-2022-04-18 12:58:12,743 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-4] fetching all Roles
-2022-04-18 12:58:12,748 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-4] fetching all places
-2022-04-18 12:58:30,631 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-5] fetching all Roles
-2022-04-18 12:58:30,636 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-5] fetching all places
-2022-04-18 12:58:50,008 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-6] fetching all Roles
-2022-04-18 12:58:50,014 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-6] fetching all places
-2022-04-18 12:58:57,050 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-7] LOGGING OUT THEN LOGGING IN
-2022-04-18 12:58:58,947 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-8] fetching all Roles
-2022-04-18 12:58:58,951 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-8] fetching all places
-2022-04-18 12:59:02,202 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-9] LOGGING OUT THEN LOGGING IN
-2022-04-18 13:00:44,270 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-1] fetching all Roles
-2022-04-18 13:00:44,274 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-1] fetching all places
-2022-04-18 13:06:14,336 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-15] Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-04-18 13:06:14,340 INFO com.zaxxer.hikari.HikariDataSource [Thread-15] HikariPool-4 - Shutdown initiated...
-2022-04-18 13:06:14,344 INFO com.zaxxer.hikari.HikariDataSource [Thread-15] HikariPool-4 - Shutdown completed.
-2022-04-18 13:06:14,593 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting OnlinecourseApplication using Java 17.0.2 on FSTAdmins-MacBook-Pro.local with PID 5991 (/Users/fst.user/Documents/workspace-spring-tool-suite-4-4.14.0.RELEASE/onlinecourse/target/classes started by fst.user in /Users/fst.user/Documents/workspace-spring-tool-suite-4-4.14.0.RELEASE/onlinecourse)
-2022-04-18 13:06:14,593 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
-2022-04-18 13:06:14,657 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-04-18 13:06:14,665 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 8 ms. Found 5 JPA repository interfaces.
-2022-04-18 13:06:14,695 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
-2022-04-18 13:06:14,695 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
-2022-04-18 13:06:14,695 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
-2022-04-18 13:06:14,695 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.60]
-2022-04-18 13:06:14,701 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
-2022-04-18 13:06:14,701 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 107 ms
-2022-04-18 13:06:14,713 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-5 - Starting...
-2022-04-18 13:06:14,717 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-5 - Start completed.
-2022-04-18 13:06:14,719 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-04-18 13:06:14,721 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-04-18 13:06:14,744 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-04-18 13:06:14,744 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-04-18 13:06:14,791 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-04-18 13:06:14,801 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will not secure any request
-2022-04-18 13:06:14,815 INFO org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [restartedMain] Adding welcome page: class path resource [static/index.html]
-2022-04-18 13:06:14,828 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
-2022-04-18 13:06:14,830 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
-2022-04-18 13:06:14,831 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path '/onlinecourse'
-2022-04-18 13:06:14,832 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started OnlinecourseApplication in 0.425 seconds (JVM running for 1282.361)
-2022-04-18 13:06:14,833 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2022-04-18 16:48:08,048 INFO com.zaxxer.hikari.HikariDataSource [Thread-107] HikariPool-27 - Shutdown completed.
+2022-04-18 16:48:08,113 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting OnlinecourseApplication using Java 17.0.2 on DESKTOP-QM5CFFO with PID 9128 (C:\Users\daryllpc\Desktop\onlinecourse\target\classes started by daryllpc in C:\Users\daryllpc\Desktop\onlinecourse)
+2022-04-18 16:48:08,113 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-04-18 16:48:08,186 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-18 16:48:08,197 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 10 ms. Found 5 JPA repository interfaces.
+2022-04-18 16:48:08,224 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2022-04-18 16:48:08,224 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-18 16:48:08,224 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2022-04-18 16:48:08,224 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-18 16:48:08,236 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-04-18 16:48:08,236 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 122 ms
+2022-04-18 16:48:08,251 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-28 - Starting...
+2022-04-18 16:48:08,253 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-28 - Start completed.
+2022-04-18 16:48:08,255 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-18 16:48:08,258 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-04-18 16:48:08,275 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-18 16:48:08,275 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-18 16:48:08,331 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-18 16:48:08,342 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will not secure any request
+2022-04-18 16:48:08,355 INFO org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [restartedMain] Adding welcome page: class path resource [static/index.html]
+2022-04-18 16:48:08,365 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-04-18 16:48:08,368 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2022-04-18 16:48:08,370 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path '/onlinecourse'
+2022-04-18 16:48:08,371 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started OnlinecourseApplication in 0.272 seconds (JVM running for 12941.187)
+2022-04-18 16:48:08,371 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2022-04-18 16:48:09,446 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-18 16:48:09,447 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2022-04-18 16:48:09,447 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 0 ms
+2022-04-18 16:48:09,450 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-1] fetching all courses
+2022-04-18 16:48:10,822 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-2] Enrolling student supermario to course Rizal
+2022-04-18 16:48:10,993 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-3] fetching all courses
+2022-04-18 16:48:18,456 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-4] Dropping student supermario from course Rizal
+2022-04-18 16:48:18,543 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-5] fetching all courses
+2022-04-18 16:48:20,170 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-6] Dropping student supermario from course History
+2022-04-18 16:48:20,326 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-7] fetching all courses
+2022-04-18 16:48:57,285 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-8] fetching all courses
+2022-04-18 16:50:06,021 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-10] fetching all courses
+2022-04-18 16:50:07,241 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-1] fetching all Roles
+2022-04-18 16:50:07,244 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-1] fetching all places
+2022-04-18 16:50:11,630 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-2] fetching all courses
+2022-04-18 16:50:57,875 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-5] fetching all courses
+2022-04-18 16:50:58,883 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-6] fetching all courses
+2022-04-18 16:53:05,477 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-9] fetching all Roles
+2022-04-18 16:53:05,478 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-9] fetching all places
+2022-04-18 16:53:37,663 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-10] getting role with an id of 1
+2022-04-18 16:53:37,730 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-10] Saving new user to the database: superrmarioo
+2022-04-18 16:53:37,888 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-1] LOGGING OUT USER: supermario
+2022-04-18 16:53:50,806 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-6] fetching all courses
+2022-04-18 16:53:53,771 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-7] fetching all Roles
+2022-04-18 16:53:53,772 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-7] fetching all places

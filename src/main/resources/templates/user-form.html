@@ -17,10 +17,8 @@
 
 <div class="container">
 
-    <h3>User Directory</h3>
+    <h3 th:text="'Update '+${user.firstName}+' '+${user.lastName}"></h3>
     <hr>
-
-    <p class="h4 mb-4">Save User</p>
 
     <form action="#" th:action="@{/SaveUser}" th:object="${user}" method="POST" enctype="multipart/form-data">
 
@@ -79,7 +77,7 @@
     </form>
 
     <hr>
-    <a th:href="@{/ListUsers}">Back to Users List</a>
+    <a th:href="@{/Instructor/InstructorProfile}">Back to Profile</a>
 </div>
 
 </body>

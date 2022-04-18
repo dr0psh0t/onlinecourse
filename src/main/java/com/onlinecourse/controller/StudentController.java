@@ -44,7 +44,7 @@ public class StudentController {
 
 		courseService.enroll(userid, courseid);
 		
-		return "redirect:/Student/CourseList";
+		return "redirect:/Student/StudentProfile";
 	}
 	
 	@PostMapping("/Drop")
@@ -54,6 +54,6 @@ public class StudentController {
 
 		courseService.dropStudent(userid, courseid);
 		
-		return "redirect:/Student/CourseList";
+		return "redirect:/Student/StudentProfile";
 	}
 }

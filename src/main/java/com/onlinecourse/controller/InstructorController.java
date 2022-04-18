@@ -7,8 +7,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.onlinecourse.entity.Course;
 import com.onlinecourse.service.CourseService;
@@ -52,4 +54,20 @@ public class InstructorController {
         
     	return "redirect:/Instructor/InstructorProfile";
     }
+	
+	@GetMapping("/DeleteCourse/{id}")
+	public String deleteCourse(@PathVariable(value = "id") int id) {
+		
+		courseService.deleteCourse(id);
+		
+		return "redirect:/Instructor/InstructorProfile";
+	}
+	
+	@GetMapping("/UpdateCourse")
+	public String updateCourse(@RequestParam(value = "id") int id, Model model) {
+		
+		model.addAttribute("course", courseService.findById(id));
+		
+		return "course-form";
+	}
 }
