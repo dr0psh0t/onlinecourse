@@ -34,7 +34,7 @@
     </root>
 
     <!-- LOG "com.wmdc.dashboard.tests.logging" at TRACE level -->
-   <!-- <logger name="com.wmdc.dashboard.api" level="warn" additivity="false">
+   <!-- <logger name="com.kjll.dashboard.api" level="warn" additivity="false">
         <appender-ref ref="RollingFile" />
         <appender-ref ref="Console" />
     </logger>-->

@@ -30,8 +30,8 @@ public class OnlinecourseApplication {
 	CommandLineRunner run(UserService userService) {
 		return args -> {
 			
-			/*
-			userService.saveRole(new Role(Roles.STUDENT.name()));
+			
+			/*userService.saveRole(new Role(Roles.STUDENT.name()));
 			userService.saveRole(new Role(Roles.INSTRUCTOR.name()));
 			userService.saveRole(new Role(Roles.MODERATOR.name()));
 			userService.saveRole(new Role(Roles.ADMIN.name()));
