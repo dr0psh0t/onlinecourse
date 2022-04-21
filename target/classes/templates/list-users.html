@@ -18,10 +18,8 @@
     <div class="container">
         <h3>User Directory</h3>
         <hr>
-        <a th:href="@{/AddUserForm}" class="btn btn-primary btn-sm mb-3">Add User</a>
-        <a th:href="@{/CourseList}" class="btn btn-primary btn-sm mb-3">Courses</a>
-        <a th:href="@{/Student/StudentProfile}" class="btn btn-primary btn-sm mb-3">Student Profile</a>
-        <a th:href="@{/Instructor/InstructorProfile}" class="btn btn-primary btn-sm mb-3">Instructor Profile</a>
+        <a th:href="@{/Home}" class="btn btn-primary btn-sm mb-3">Home</a>
+        <a th:href="@{/Admin/CourseList}" class="btn btn-primary btn-sm mb-3">Courses</a>
         <a th:href="@{/Logout}" class="btn btn-primary btn-sm mb-3">Logout</a>
 
         <table class="table table-bordered table-striped">
@@ -56,17 +54,17 @@
 						</div>
 						-->
 						
-						<a th:href="@{/GetImage/{id}(id=${user.id})}"
+						<a th:href="@{/Admin/GetImage/{id}(id=${user.id})}"
                            class="btn btn-info btn-sm">
-                            Image1
+                            Image
                         </a>
                         
-                        <a th:href="@{/UpdateUserForm(userId=${user.id})}"
+                        <a th:href="@{/Update/UpdateUserForm(userId=${user.id})}"
                            class="btn btn-info btn-sm">
                             Update
                         </a>
 
-                        <a th:href="@{/Delete(userId=${user.id})}"
+                        <a th:href="@{/Deletion/Delete(userId=${user.id})}"
                            class="btn btn-danger btn-sm"
                            onclick="if (!(confirm('Are you sure you want to delete this user'))) return false">
                             Delete

@@ -34,9 +34,10 @@ public class CourseSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
     	//	always use hasAuthority
     	
-    	
         http.authorizeRequests()
-            .antMatchers("/Home").hasAnyAuthority("INSTRUCTOR", "STUDENT")
+            .antMatchers("/Home").hasAnyAuthority(Roles.INSTRUCTOR.name(), Roles.STUDENT.name(), Roles.ADMIN.name(), Roles.MODERATOR.name())
+            .antMatchers("/Update/UpdateUserForm").hasAnyAuthority(Roles.INSTRUCTOR.name(), Roles.STUDENT.name(), Roles.ADMIN.name(), Roles.MODERATOR.name())
+            .antMatchers("/Admin/**").hasAnyAuthority(Roles.ADMIN.name(), Roles.MODERATOR.name())
             .antMatchers("/Instructor/**").hasAuthority(Roles.INSTRUCTOR.name())
             .antMatchers("/Student/**").hasAuthority(Roles.STUDENT.name())
             .and()
