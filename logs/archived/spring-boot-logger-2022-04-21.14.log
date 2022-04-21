@@ -1,0 +1,74 @@
+2022-04-21 11:41:14,464 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-10] Get course
+2022-04-21 11:41:21,313 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-1] saving course: [12-Java-joebiden]
+2022-04-21 11:41:21,324 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-2] fetching all courses
+2022-04-21 11:41:23,930 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-3] fetching all courses
+2022-04-21 11:41:46,168 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-4] Enrolling student obama to course Java
+2022-04-21 11:41:46,176 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-5] fetching all courses
+2022-04-21 11:42:32,722 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-10] fetching all courses
+2022-04-21 11:42:33,345 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-1] LOGGING OUT USER: joebiden
+2022-04-21 11:42:42,170 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-3] fetching all Roles
+2022-04-21 11:42:42,172 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-3] fetching all places
+2022-04-21 11:43:01,946 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-10] fetching all Roles
+2022-04-21 11:43:01,950 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-10] fetching all places
+2022-04-21 11:43:28,554 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-1] getting role with an id of 2
+2022-04-21 11:43:28,664 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-1] Saving new user to the database: joebiden
+2022-04-21 11:43:28,671 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-2] LOGGING OUT USER: duterte
+2022-04-21 11:44:58,733 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-5] fetching all courses
+2022-04-21 11:44:59,469 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-6] fetching all courses
+2022-04-21 11:49:24,602 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-5] fetching all Roles
+2022-04-21 11:49:24,608 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-5] fetching all places
+2022-04-21 11:49:40,093 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-8] LOGGING OUT USER: duterte
+2022-04-21 11:49:41,196 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-10] fetching all Roles
+2022-04-21 11:49:41,199 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-10] fetching all places
+2022-04-21 11:50:17,445 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-2] fetching all Roles
+2022-04-21 11:50:17,448 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-2] fetching all places
+2022-04-21 11:51:20,028 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-5] fetching all Roles
+2022-04-21 11:51:20,031 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-5] fetching all places
+2022-04-21 11:51:47,535 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-6] getting role with an id of 1
+2022-04-21 11:51:47,656 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-6] Saving new user to the database: asdfg
+2022-04-21 11:51:47,667 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-7] LOGGING OUT USER: anonymousUser
+2022-04-21 11:53:51,097 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-101] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-21 11:53:51,099 INFO com.zaxxer.hikari.HikariDataSource [Thread-101] HikariPool-26 - Shutdown initiated...
+2022-04-21 11:53:51,100 INFO com.zaxxer.hikari.HikariDataSource [Thread-101] HikariPool-26 - Shutdown completed.
+2022-04-21 11:53:51,308 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting OnlinecourseApplication using Java 17.0.2 on FSTAdmins-MacBook-Pro.local with PID 3190 (/Users/fst.user/Documents/workspace-sts/onlinecourse/target/classes started by fst.user in /Users/fst.user/Documents/workspace-sts/onlinecourse)
+2022-04-21 11:53:51,308 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-04-21 11:53:51,395 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-21 11:53:51,404 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 8 ms. Found 5 JPA repository interfaces.
+2022-04-21 11:53:51,446 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2022-04-21 11:53:51,446 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-21 11:53:51,446 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2022-04-21 11:53:51,446 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-21 11:53:51,450 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-04-21 11:53:51,450 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 140 ms
+2022-04-21 11:53:51,465 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-27 - Starting...
+2022-04-21 11:53:51,468 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-27 - Start completed.
+2022-04-21 11:53:51,470 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-21 11:53:51,474 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-04-21 11:53:51,490 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-21 11:53:51,490 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-21 11:53:51,555 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-21 11:53:51,570 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will not secure any request
+2022-04-21 11:53:51,593 INFO org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [restartedMain] Adding welcome page: class path resource [static/index.html]
+2022-04-21 11:53:51,613 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-04-21 11:53:51,623 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2022-04-21 11:53:51,624 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path '/onlinecourse'
+2022-04-21 11:53:51,626 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started OnlinecourseApplication in 0.469 seconds (JVM running for 5758.425)
+2022-04-21 11:53:51,627 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2022-04-21 11:54:02,179 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-105] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-21 11:54:02,180 INFO com.zaxxer.hikari.HikariDataSource [Thread-105] HikariPool-27 - Shutdown initiated...
+2022-04-21 11:54:02,180 INFO com.zaxxer.hikari.HikariDataSource [Thread-105] HikariPool-27 - Shutdown completed.
+2022-04-21 11:54:02,241 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting OnlinecourseApplication using Java 17.0.2 on FSTAdmins-MacBook-Pro.local with PID 3190 (/Users/fst.user/Documents/workspace-sts/onlinecourse/target/classes started by fst.user in /Users/fst.user/Documents/workspace-sts/onlinecourse)
+2022-04-21 11:54:02,241 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-04-21 11:54:02,305 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-21 11:54:02,313 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 7 ms. Found 5 JPA repository interfaces.
+2022-04-21 11:54:02,345 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2022-04-21 11:54:02,346 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-21 11:54:02,346 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2022-04-21 11:54:02,346 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-21 11:54:02,349 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-04-21 11:54:02,349 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 107 ms
+2022-04-21 11:54:02,363 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-28 - Starting...
+2022-04-21 11:54:02,365 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-28 - Start completed.
+2022-04-21 11:54:02,367 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-21 11:54:02,369 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-04-21 11:54:02,382 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]

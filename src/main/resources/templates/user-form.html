@@ -20,7 +20,7 @@
     <h3 th:text="'Update '+${user.firstName}+' '+${user.lastName}"></h3>
     <hr>
 
-    <form action="#" th:action="@{/SaveUser}" th:object="${user}" method="POST" enctype="multipart/form-data">
+    <form action="#" th:action="@{/Save/SaveUser}" th:object="${user}" method="POST" enctype="multipart/form-data">
 
         <!-- Add hidden form field to handle update -->
         <!-- Hidden form field required for updates -->

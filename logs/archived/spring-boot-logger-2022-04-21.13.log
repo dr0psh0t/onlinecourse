@@ -1,0 +1,83 @@
+2022-04-21 11:33:10,663 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-5] fetching all courses
+2022-04-21 11:33:16,026 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-7] saving course: [0-History-joebiden]
+2022-04-21 11:33:16,039 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-8] fetching all courses
+2022-04-21 11:33:20,127 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-9] Get course
+2022-04-21 11:33:23,674 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-10] fetching all courses
+2022-04-21 11:33:31,012 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-1] fetching all Roles
+2022-04-21 11:33:31,015 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-1] fetching all places
+2022-04-21 11:33:48,664 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-2] fetching all courses
+2022-04-21 11:33:51,056 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-3] LOGGING OUT USER: joebiden
+2022-04-21 11:34:06,128 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-8] fetching all courses
+2022-04-21 11:34:43,775 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-9] fetching all courses
+2022-04-21 11:34:46,450 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-10] Enrolling student obama to course History
+2022-04-21 11:34:46,461 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-1] fetching all courses
+2022-04-21 11:34:49,815 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-2] fetching all courses
+2022-04-21 11:35:03,091 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-3] Get course
+2022-04-21 11:35:04,495 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-4] fetching all courses
+2022-04-21 11:35:08,323 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-5] Deleting course
+2022-04-21 11:35:08,346 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-6] fetching all courses
+2022-04-21 11:35:11,727 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-7] fetching all courses
+2022-04-21 11:35:26,583 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-9] fetching all Roles
+2022-04-21 11:35:26,587 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-9] fetching all places
+2022-04-21 11:37:50,441 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [Thread-97] Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-04-21 11:37:50,442 INFO com.zaxxer.hikari.HikariDataSource [Thread-97] HikariPool-25 - Shutdown initiated...
+2022-04-21 11:37:50,443 INFO com.zaxxer.hikari.HikariDataSource [Thread-97] HikariPool-25 - Shutdown completed.
+2022-04-21 11:37:51,420 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting OnlinecourseApplication using Java 17.0.2 on FSTAdmins-MacBook-Pro.local with PID 3190 (/Users/fst.user/Documents/workspace-sts/onlinecourse/target/classes started by fst.user in /Users/fst.user/Documents/workspace-sts/onlinecourse)
+2022-04-21 11:37:51,420 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2022-04-21 11:37:51,513 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-04-21 11:37:51,521 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 8 ms. Found 5 JPA repository interfaces.
+2022-04-21 11:37:51,560 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
+2022-04-21 11:37:51,560 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
+2022-04-21 11:37:51,560 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2022-04-21 11:37:51,560 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-21 11:37:51,570 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2022-04-21 11:37:51,571 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 149 ms
+2022-04-21 11:37:51,587 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-26 - Starting...
+2022-04-21 11:37:51,590 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-26 - Start completed.
+2022-04-21 11:37:51,592 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-21 11:37:51,594 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-04-21 11:37:51,618 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-21 11:37:51,618 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-21 11:37:51,681 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-21 11:37:51,695 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will not secure any request
+2022-04-21 11:37:51,723 INFO org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [restartedMain] Adding welcome page: class path resource [static/index.html]
+2022-04-21 11:37:51,743 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-04-21 11:37:51,749 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2022-04-21 11:37:51,749 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path '/onlinecourse'
+2022-04-21 11:37:51,751 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started OnlinecourseApplication in 1.251 seconds (JVM running for 4798.562)
+2022-04-21 11:37:51,752 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
+2022-04-21 11:38:00,892 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-21 11:38:00,893 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2022-04-21 11:38:00,894 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2022-04-21 11:38:00,911 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-1] fetching all Roles
+2022-04-21 11:38:00,920 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-1] fetching all places
+2022-04-21 11:38:02,368 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-2] fetching all Roles
+2022-04-21 11:38:02,371 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-2] fetching all places
+2022-04-21 11:38:26,003 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-3] getting role with an id of 1
+2022-04-21 11:38:26,118 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-3] Saving new user to the database: obama
+2022-04-21 11:38:26,125 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-4] LOGGING OUT USER: obama
+2022-04-21 11:38:43,235 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-9] fetching all courses
+2022-04-21 11:38:46,904 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-10] fetching all Roles
+2022-04-21 11:38:46,906 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-10] fetching all places
+2022-04-21 11:38:48,878 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-1] fetching all Roles
+2022-04-21 11:38:48,893 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-1] fetching all places
+2022-04-21 11:39:12,814 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-3] getting role with an id of 2
+2022-04-21 11:39:12,926 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-3] Saving new user to the database: joebiden
+2022-04-21 11:39:12,963 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-4] LOGGING OUT USER: joebiden
+2022-04-21 11:39:51,191 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-10] fetching all courses
+2022-04-21 11:40:05,135 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-2] saving course: [0-History-joebiden]
+2022-04-21 11:40:05,143 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-3] fetching all courses
+2022-04-21 11:40:07,829 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-4] fetching all courses
+2022-04-21 11:40:10,700 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-5] Get course
+2022-04-21 11:40:17,648 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-6] saving course: [11-Drama-joebiden]
+2022-04-21 11:40:17,658 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-7] fetching all courses
+2022-04-21 11:40:23,342 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-8] fetching all courses
+2022-04-21 11:40:32,736 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-9] Deleting course
+2022-04-21 11:40:32,743 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-10] fetching all courses
+2022-04-21 11:40:35,517 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-1] fetching all courses
+2022-04-21 11:40:36,907 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-2] fetching all courses
+2022-04-21 11:40:53,161 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-4] saving course: [0-History-joebiden]
+2022-04-21 11:40:53,172 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-5] fetching all courses
+2022-04-21 11:40:55,805 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-6] fetching all courses
+2022-04-21 11:40:56,834 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-7] Enrolling student obama to course History
+2022-04-21 11:40:56,841 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-8] fetching all courses
