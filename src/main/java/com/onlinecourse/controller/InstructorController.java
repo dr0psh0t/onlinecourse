@@ -40,16 +40,19 @@ public class InstructorController {
 	}
 	
 	@GetMapping("/AddCourseForm")
-    public String addCourseForm(Model model) {
+    public String addCourseForm(Model model, Principal principal) {
+
+		Course course = new Course();
+		course.setInstructor(userService.findByUsername(principal.getName()));
         
-    	model.addAttribute("course", new Course());
+    	model.addAttribute("course", course);
     	
     	return "course-form";
     }
 	
 	@PostMapping("/SaveCourse")
-    public String saveUser(@ModelAttribute("course") Course course, Principal principal) {
-		
+    public String saveCourse(@ModelAttribute("course") Course course) {
+
 		courseService.saveCourse(course);
         
     	return "redirect:/Instructor/InstructorProfile";

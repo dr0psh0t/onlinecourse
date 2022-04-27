@@ -16,8 +16,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 public class OnlinecourseApplication {
 
 	public static void main(String[] args) {
-		
-		System.out.println("Daryll gwapo");
 		SpringApplication.run(OnlinecourseApplication.class, args);
 	}
 

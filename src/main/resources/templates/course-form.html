@@ -29,7 +29,11 @@
         <!-- Hidden form field required for updates -->
         <!-- This binds to the model attribute. Tells your app which course to update -->
         <input type="hidden" th:field="*{id}" />
-        <input type="hidden" th:field="*{students}" />
+
+        <td th:switch="${course.students != null}">
+            <input th:case="true" type="hidden" th:field="*{students}" />
+        </td>
+
         <input type="hidden" th:field="*{instructor}" />
 
         <label for="formFile" class="form-label">Title:</label>

@@ -1,24 +1,28 @@
-2022-04-27 11:12:38,986 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
-2022-04-27 11:12:39,055 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
-2022-04-27 11:12:39,078 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-04-27 11:12:39,102 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.6.7.Final
-2022-04-27 11:12:39,188 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-04-27 11:12:39,230 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-04-27 11:12:39,475 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-04-27 11:12:39,478 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-04-27 11:12:39,705 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-04-27 11:12:39,781 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will not secure any request
-2022-04-27 11:12:39,862 INFO org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [restartedMain] Adding welcome page: class path resource [static/index.html]
-2022-04-27 11:12:39,921 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
-2022-04-27 11:12:39,927 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
-2022-04-27 11:12:39,935 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path '/onlinecourse'
-2022-04-27 11:12:39,940 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started OnlinecourseApplication in 2.12 seconds (JVM running for 2.513)
-2022-04-27 11:13:02,844 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-04-27 11:13:02,844 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
-2022-04-27 11:13:02,845 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
-2022-04-27 11:13:02,879 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-1] fetching all courses
-2022-04-27 11:13:15,265 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-9] fetching all courses
-2022-04-27 11:13:18,412 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-10] Get course
-2022-04-27 11:13:23,955 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-1] saving course: [12-Java-joebiden]
-2022-04-27 11:13:23,989 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-2] fetching all courses
-2022-04-27 11:13:26,538 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-3] fetching all courses
+2022-04-27 12:25:40,504 INFO org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [restartedMain] Adding welcome page: class path resource [static/index.html]
+2022-04-27 12:25:40,558 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-04-27 12:25:40,563 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2022-04-27 12:25:40,570 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path '/onlinecourse'
+2022-04-27 12:25:40,575 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started OnlinecourseApplication in 1.931 seconds (JVM running for 2.154)
+2022-04-27 12:25:44,285 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-27 12:25:44,286 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2022-04-27 12:25:44,288 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 2 ms
+2022-04-27 12:25:44,316 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-1] fetching all courses
+2022-04-27 12:25:53,864 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-3] saving course: [0-Java]
+2022-04-27 12:25:53,877 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-4] fetching all courses
+2022-04-27 12:26:05,501 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-5] Get course
+2022-04-27 12:26:11,848 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-6] saving course: [17-PHP]
+2022-04-27 12:26:11,878 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-7] fetching all courses
+2022-04-27 12:26:28,608 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-8] fetching all courses
+2022-04-27 12:26:30,038 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-9] fetching all courses
+2022-04-27 12:26:30,534 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-10] fetching all courses
+2022-04-27 12:26:30,852 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-1] fetching all courses
+2022-04-27 12:26:37,672 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-3] saving course: [0-History]
+2022-04-27 12:26:37,686 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-4] fetching all courses
+2022-04-27 12:26:40,821 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-5] fetching all courses
+2022-04-27 12:26:42,427 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-6] Enrolling student obama to course History
+2022-04-27 12:26:42,441 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-7] fetching all courses
+2022-04-27 12:26:44,910 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-8] fetching all courses
+2022-04-27 12:26:51,346 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-9] Get course
+2022-04-27 12:27:01,063 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-10] saving course: [18-World History]
+2022-04-27 12:27:01,083 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-1] fetching all courses
+2022-04-27 12:27:05,247 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-2] fetching all courses

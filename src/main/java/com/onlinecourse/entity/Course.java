@@ -3,6 +3,7 @@ package com.onlinecourse.entity;
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 @Entity
 @Table(name = "course")
@@ -72,6 +73,7 @@ public class Course {
 
     @Override
     public String toString() {
-        return "["+id+"-"+title+"-"+instructor.getUsername()+"]";
+
+        return "["+id+"-"+title+"]";
     }
 }
