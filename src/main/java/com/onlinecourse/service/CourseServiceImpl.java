@@ -30,9 +30,7 @@ public class CourseServiceImpl implements CourseService {
 	}
 
 	@Override
-	public void saveCourse(Course course, Principal principal) {
-		course.setInstructor(userService.findByUsername(principal.getName()));
-		
+	public void saveCourse(Course course) {
 		Log.info("saving course: "+course);
 		courseRepo.save(course);
 	}

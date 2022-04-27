@@ -50,7 +50,7 @@ public class InstructorController {
 	@PostMapping("/SaveCourse")
     public String saveUser(@ModelAttribute("course") Course course, Principal principal) {
 		
-		courseService.saveCourse(course, principal);
+		courseService.saveCourse(course);
         
     	return "redirect:/Instructor/InstructorProfile";
     }

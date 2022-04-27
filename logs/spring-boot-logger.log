@@ -1,64 +1,24 @@
-2022-04-21 11:54:02,382 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-04-21 11:54:02,443 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-04-21 11:54:02,457 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will not secure any request
-2022-04-21 11:54:02,477 INFO org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [restartedMain] Adding welcome page: class path resource [static/index.html]
-2022-04-21 11:54:02,497 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
-2022-04-21 11:54:02,502 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
-2022-04-21 11:54:02,503 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path '/onlinecourse'
-2022-04-21 11:54:02,505 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started OnlinecourseApplication in 0.275 seconds (JVM running for 5769.304)
-2022-04-21 11:54:02,505 INFO org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener [restartedMain] Condition evaluation unchanged
-2022-04-21 11:54:52,962 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-04-21 11:54:52,964 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
-2022-04-21 11:54:52,965 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
-2022-04-21 11:55:11,279 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-3] fetching all courses
-2022-04-21 11:55:14,751 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-5] LOGGING OUT USER: duterte
-2022-04-21 11:57:52,904 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-4] fetching all courses
-2022-04-21 11:57:57,984 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-6] LOGGING OUT USER: joebiden
-2022-04-21 11:59:55,963 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-2] fetching all courses
-2022-04-21 11:59:57,962 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-3] fetching all Roles
-2022-04-21 11:59:57,969 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-3] fetching all places
-2022-04-21 11:59:59,085 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-4] fetching all courses
-2022-04-21 12:00:03,448 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-6] fetching all courses
-2022-04-21 12:00:07,319 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-7] Get course
-2022-04-21 12:00:11,580 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-8] saving course: [12-Drama-joebiden]
-2022-04-21 12:00:11,594 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-9] fetching all courses
-2022-04-21 12:00:39,506 INFO org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(184)-127.0.0.1] Application shutdown requested.
-2022-04-21 12:00:39,512 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [RMI TCP Connection(184)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-04-21 12:00:39,513 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(184)-127.0.0.1] HikariPool-28 - Shutdown initiated...
-2022-04-21 12:00:39,513 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(184)-127.0.0.1] HikariPool-28 - Shutdown completed.
-2022-04-21 12:01:38,883 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Starting OnlinecourseApplication using Java 17.0.2 on FSTAdmins-MacBook-Pro.local with PID 5205 (/Users/fst.user/Documents/workspace-sts/onlinecourse/target/classes started by fst.user in /Users/fst.user/Documents/workspace-sts/onlinecourse)
-2022-04-21 12:01:38,884 INFO org.springframework.boot.SpringApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
-2022-04-21 12:01:38,902 INFO org.springframework.boot.logging.DeferredLog [restartedMain] The Class-Path manifest attribute in /Users/fst.user/.m2/repository/com/mchange/c3p0/0.9.5.5/c3p0-0.9.5.5.jar referenced one or more files that do not exist: file:/Users/fst.user/.m2/repository/com/mchange/c3p0/0.9.5.5/mchange-commons-java-0.2.19.jar
-2022-04-21 12:01:38,903 INFO org.springframework.boot.logging.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2022-04-21 12:01:38,903 INFO org.springframework.boot.logging.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2022-04-21 12:01:39,160 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-04-21 12:01:39,188 INFO org.springframework.data.repository.config.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 23 ms. Found 5 JPA repository interfaces.
-2022-04-21 12:01:39,430 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8080 (http)
-2022-04-21 12:01:39,434 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8080"]
-2022-04-21 12:01:39,434 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting service [Tomcat]
-2022-04-21 12:01:39,434 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.60]
-2022-04-21 12:01:39,467 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
-2022-04-21 12:01:39,467 INFO org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 564 ms
-2022-04-21 12:01:39,544 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
-2022-04-21 12:01:39,619 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
-2022-04-21 12:01:39,641 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-04-21 12:01:39,665 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.6.7.Final
-2022-04-21 12:01:39,729 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-04-21 12:01:39,770 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
-2022-04-21 12:01:39,997 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-04-21 12:01:40,000 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-04-21 12:01:40,180 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-04-21 12:01:40,257 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will not secure any request
-2022-04-21 12:01:40,335 INFO org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [restartedMain] Adding welcome page: class path resource [static/index.html]
-2022-04-21 12:01:40,395 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
-2022-04-21 12:01:40,404 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
-2022-04-21 12:01:40,411 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path '/onlinecourse'
-2022-04-21 12:01:40,416 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started OnlinecourseApplication in 1.695 seconds (JVM running for 2.296)
-2022-04-21 12:01:43,263 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-04-21 12:01:43,264 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
-2022-04-21 12:01:43,265 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
-2022-04-21 12:01:43,286 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-1] LOGGING OUT USER: joebiden
-2022-04-21 12:02:32,594 INFO org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(10)-127.0.0.1] Application shutdown requested.
-2022-04-21 12:02:32,614 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [RMI TCP Connection(10)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
-2022-04-21 12:02:32,617 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(10)-127.0.0.1] HikariPool-1 - Shutdown initiated...
-2022-04-21 12:02:32,623 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(10)-127.0.0.1] HikariPool-1 - Shutdown completed.
+2022-04-27 11:12:38,986 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2022-04-27 11:12:39,055 INFO com.zaxxer.hikari.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2022-04-27 11:12:39,078 INFO org.hibernate.jpa.internal.util.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-04-27 11:12:39,102 INFO org.hibernate.Version [restartedMain] HHH000412: Hibernate ORM core version 5.6.7.Final
+2022-04-27 11:12:39,188 INFO org.hibernate.annotations.common.reflection.java.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-04-27 11:12:39,230 INFO org.hibernate.dialect.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2022-04-27 11:12:39,475 INFO org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-04-27 11:12:39,478 INFO org.springframework.orm.jpa.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-04-27 11:12:39,705 WARN org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-04-27 11:12:39,781 INFO org.springframework.security.web.DefaultSecurityFilterChain [restartedMain] Will not secure any request
+2022-04-27 11:12:39,862 INFO org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping [restartedMain] Adding welcome page: class path resource [static/index.html]
+2022-04-27 11:12:39,921 INFO org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2022-04-27 11:12:39,927 INFO org.apache.juli.logging.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8080"]
+2022-04-27 11:12:39,935 INFO org.springframework.boot.web.embedded.tomcat.TomcatWebServer [restartedMain] Tomcat started on port(s): 8080 (http) with context path '/onlinecourse'
+2022-04-27 11:12:39,940 INFO org.springframework.boot.StartupInfoLogger [restartedMain] Started OnlinecourseApplication in 2.12 seconds (JVM running for 2.513)
+2022-04-27 11:13:02,844 INFO org.apache.juli.logging.DirectJDKLog [http-nio-8080-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-27 11:13:02,844 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Initializing Servlet 'dispatcherServlet'
+2022-04-27 11:13:02,845 INFO org.springframework.web.servlet.FrameworkServlet [http-nio-8080-exec-1] Completed initialization in 1 ms
+2022-04-27 11:13:02,879 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-1] fetching all courses
+2022-04-27 11:13:15,265 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-9] fetching all courses
+2022-04-27 11:13:18,412 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-10] Get course
+2022-04-27 11:13:23,955 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-1] saving course: [12-Java-joebiden]
+2022-04-27 11:13:23,989 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-2] fetching all courses
+2022-04-27 11:13:26,538 INFO com.onlinecourse.utils.Log [http-nio-8080-exec-3] fetching all courses
